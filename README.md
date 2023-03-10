@@ -73,3 +73,33 @@ org > Connected App
 org > Key Manage
 org > App Manager
 org > Classic
+
+
+---------------------------------------------------------
+
+EXEMPLO DATAMAP E JSON
+
+JSON ACCOUNT MONTADO EXEMPLO
+{
+        "name" : "Casa do João - Pães",
+        "descrp" : "Casa Lúdica e Padaria",
+        "cnpj" : "82731088000186",
+        "email" : "casajp@provedor.com",
+        "telefone" : "(21)35354747",
+        "data" : "2018-12-25",
+        "setor" : "Padaria",
+        "estado" : "RS"
+}
+
+
+
+
+DATA MAP
+//TYPE // CAMPO //PARAMETRO //PARAMETRO // VALOR 
+String / Name / name / name / Ana Lucia Pontes
+String / Description / descrpt / descrpt / CEO de uma startup do tipo Padaria de Auto Atendimento 
+String / CNPJ__c / cnpj / cnpj / 91417192000191
+String / Email__c / email / email / analupontes@provedor.com
+String / Phone / telefone / telefone / 2193760909
+Date / DataFundacao__c / data / data /  2006-10-20;
+String / Industry / setor / setor / Padaria
