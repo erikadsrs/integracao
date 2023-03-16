@@ -1,0 +1,26 @@
+public static void reatribuiProprietario(List<Case> casos){
+
+    //INSERIR OLDMAP E COMPARAR COM NEWMAP
+
+        try {
+        
+        List<Case> caseList = trigger.new; 
+
+        List<recordType> recordTypeList1 = [SELECT Id FROM RecordType WHERE SobjectType = 'Case' AND DeveloperName = '1' ];
+        List<recordType> recordTypeList2 = [SELECT Id FROM RecordType WHERE SobjectType = 'Case' AND DeveloperName = '2' ];
+        List<recordType> recordTypeList3 = [SELECT Id FROM RecordType WHERE SobjectType = 'Case' AND DeveloperName = '3'];
+
+        List<Group> filaX = [SELECT Id FROM Group WHERE DeveloperName = 'X' AND Type = 'Queue'];
+        List<Group> filaY = [SELECT Id FROM Group WHERE DeveloperName = 'Y' AND Type = 'Queue'];
+
+        for(Case caso : caseList){
+            if(caso.Status == 'Reaberto' && caso.Owner.IsActive == false && caso.RecordTypeId == recordTypeList1[0].id ){
+                caso.OwnerId = filaSAC[0].id;
+            } else {
+                System.debug('verificar outros recordTypes');
+            }
+        }
+    } catch (Exception e) {
+        System.debug('erro: ' + e);
+    }
+}
